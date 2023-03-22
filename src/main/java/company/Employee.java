@@ -23,21 +23,21 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee employee) {
-        int result = this.firstName.compareTo(employee.firstName);
-        if (result != 0) {
-            return result;
+        int compareFirstName = this.firstName.compareTo(employee.firstName);
+        if (compareFirstName != 0) {
+            return compareFirstName;
         }
-        result = this.secondName.compareTo(employee.secondName);
-        if (result != 0) {
-            return result;
+        int compareSecondName = this.secondName.compareTo(employee.secondName);
+        if (compareSecondName != 0) {
+            return compareSecondName;
         }
-        result = this.department.compareTo(employee.department);
-        if (result != 0) {
-            return result;
+        int compareDepartment = this.department.compareTo(employee.department);
+        if (compareDepartment != 0) {
+            return compareDepartment;
         }
-        result = Integer.compare(this.salary, employee.salary);
-        if (result != 0) {
-            return result;
+        int compareSalary = Integer.compare(this.salary, employee.salary);
+        if (compareSalary != 0) {
+            return compareSalary;
         }
         return Integer.compare(this.age, employee.age);
     }

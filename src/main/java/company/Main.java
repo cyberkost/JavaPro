@@ -11,7 +11,12 @@ public class Main {
         for (Employee employee : employeeList) {
             System.out.println(employee);
         }
-        System.out.println("////////////////////////////////////////////////////////");
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////");
+        Collections.sort(employeeList);
+        for (Employee employee : employeeList) {
+            System.out.println(employee);
+        }
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////");
         employeeList.sort(new ComparatorRating());
         for (Employee employee : employeeList) {
             System.out.println(employee);
