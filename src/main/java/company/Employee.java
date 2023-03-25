@@ -23,6 +23,10 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee employee) {
+        int compareDepartment = this.department.compareTo(employee.department);
+        if (compareDepartment != 0) {
+            return compareDepartment;
+        }
         int compareFirstName = this.firstName.compareTo(employee.firstName);
         if (compareFirstName != 0) {
             return compareFirstName;
@@ -31,15 +35,10 @@ public class Employee implements Comparable<Employee> {
         if (compareSecondName != 0) {
             return compareSecondName;
         }
-        int compareDepartment = this.department.compareTo(employee.department);
-        if (compareDepartment != 0) {
-            return compareDepartment;
-        }
         int compareSalary = Integer.compare(this.salary, employee.salary);
         if (compareSalary != 0) {
             return compareSalary;
         }
         return Integer.compare(this.age, employee.age);
     }
-
 }
