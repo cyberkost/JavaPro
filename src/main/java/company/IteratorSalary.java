@@ -23,7 +23,8 @@ public class IteratorSalary {
                 }
             }
             int newSalary = (int) Math.round(employee.getSalary() * (1 + increasePercentage));
-            Employee newEmployee = new Employee(employee.getFirstName(),
+            Employee newEmployee = new Employee(
+                    employee.getFirstName(),
                     employee.getSecondName(),
                     employee.getDepartment(),
                     newSalary,
