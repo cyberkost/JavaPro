@@ -9,11 +9,11 @@ package company;
 import java.util.Random;
 
 public enum Rating {
-    A(),
-    B(),
-    C(),
-    D(),
-    E();
+    A,
+    B,
+    C,
+    D,
+    E;
 
     public static Rating getRandomRating() {
         Rating[] ratings = Rating.values();

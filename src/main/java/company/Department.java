@@ -5,11 +5,11 @@ package company;
 import java.util.Random;
 
 public enum Department {
-    MANAGER (),
-    IT (),
-    SALES (),
-    RECRUIT (),
-    SECRETARY ();
+    MANAGER,
+    IT,
+    SALES,
+    RECRUIT,
+    SECRETARY;
 
     public static Department getRandomDepartment() {
         Department[] departments = Department.values();
