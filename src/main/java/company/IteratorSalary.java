@@ -12,16 +12,13 @@ public class IteratorSalary {
         ListIterator<Employee> listIterator = employeelist.listIterator();
         while (listIterator.hasNext()) {
             Employee employee = listIterator.next();
-            double increasePercentage = 0.0;
-            switch (employee.getRating()) {
-                case A -> increasePercentage = 0.2;
-                case B -> increasePercentage = 0.15;
-                case C -> increasePercentage = 0.05;
-                case D -> increasePercentage = 0.0;
-                case E -> increasePercentage = -0.05;
-                default -> {
-                }
-            }
+            double increasePercentage = switch (employee.getRating()) {
+                case A -> 0.2;
+                case B -> 0.15;
+                case C -> 0.05;
+                case D -> 0.0;
+                case E -> -0.05;
+            };
             int newSalary = (int) Math.round(employee.getSalary() * (1 + increasePercentage));
             Employee newEmployee = new Employee(
                     employee.getFirstName(),
